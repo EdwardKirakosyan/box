@@ -1,0 +1,15 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  line-height: 1.6;
+  margin: 0;
+}
+
+body {
+  color: white;
+}
+
+:root {
+  background-color: #242424;
+}
