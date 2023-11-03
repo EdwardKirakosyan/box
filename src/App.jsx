@@ -1,5 +1,6 @@
 import React from "react"
 import Item from "./Item"
+import Nav from "./Nav"
 
 export default function App() {
   const [filmData, setFilmData] = React.useState([])
@@ -29,6 +30,7 @@ export default function App() {
 
   return (
     <>
+      <Nav />
       <Item data={filmData} />
     </>
   )
