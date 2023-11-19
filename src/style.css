@@ -7,7 +7,7 @@
 
 :root {
   --color-light: #fff;
-  --color-dark: #404040;
+  --color-dark: #333333;
 }
 
 html,
@@ -18,4 +18,35 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color: var(--color-dark);
   color: var(--color-light);
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 5em;
+}
+
+.nav-list-item {
+  cursor: pointer;
+}
+
+.main-container {
+  display: flex;
+  padding: 3em 8em;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: space-between;
+}
+
+.film-item {
+  width: 10em;
+}
+
+.film-image {
+  width: 10em;
+  border-radius: 2%;
+}
+
+.film-name {
+  text-align: center;
 }

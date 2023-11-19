@@ -2,11 +2,11 @@ import React from "react"
 
 export default function Item({ data }) {
   return (
-    <div>
+    <div className="main-container">
       {data.map((e) => (
-        <div key={e.rank}>
-          <h1>{e.title}</h1>
-          <img src={e.image} alt="" />
+        <div className="film-item" key={e.rank}>
+          <img className="film-image" src={e.image} alt="" />
+          <p className="film-name">{e.title}</p>
         </div>
       ))}
     </div>
