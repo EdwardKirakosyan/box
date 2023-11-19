@@ -20,6 +20,17 @@ body {
   color: var(--color-light);
 }
 
+.nav-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 4em;
+}
+
+.logo {
+  width: 50px;
+}
+
 .nav-list {
   display: flex;
   list-style: none;
