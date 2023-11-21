@@ -1,6 +1,6 @@
 import React from "react"
-import Item from "./Item"
-import Nav from "./Nav"
+import Item from "./components/Item"
+import Nav from "./components/Nav"
 
 export default function App() {
   const [filmData, setFilmData] = React.useState([])
