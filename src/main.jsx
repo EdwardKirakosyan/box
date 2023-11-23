@@ -4,6 +4,7 @@ import App from "./App"
 
 ReactDOM.createRoot(document.getElementById("root")).render(<App />)
 
+// ----------- DOCKER params -----------
 const app = require("express")()
 app.get("/", (req, res) => res.json({ message: "DOckER!!!" }))
 const port = process.env.PORT || 8080

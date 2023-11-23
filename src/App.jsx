@@ -1,4 +1,5 @@
 import React from "react"
+import { BrowserRouter, Router, Route } from "react-router-dom"
 import Item from "./components/Item"
 import Nav from "./components/Nav"
 
@@ -29,9 +30,11 @@ export default function App() {
   }, [])
 
   return (
-    <>
-      <Nav />
-      <Item data={filmData} />
-    </>
+    <BrowserRouter>
+      <Router>
+        <Route to="/" path={<Nav />} />
+        <Route to="/item" path={<Item data={filmData} />} />
+      </Router>
+    </BrowserRouter>
   )
 }
