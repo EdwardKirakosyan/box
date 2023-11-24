@@ -7,7 +7,6 @@ export default function Nav() {
       <div className="nav-main">
         <p>About page</p>
       </div>
-      <Outlet />
     </>
   )
 }
