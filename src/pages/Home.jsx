@@ -1,6 +1,5 @@
 import React from "react"
 import Item from "../components/Item"
-import Nav from "../components/Nav"
 
 export default function Home() {
   const [filmData, setFilmData] = React.useState([])
@@ -30,7 +29,6 @@ export default function Home() {
 
   return (
     <>
-      <Nav />
       <Item data={filmData} />
     </>
   )

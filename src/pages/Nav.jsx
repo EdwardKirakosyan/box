@@ -4,7 +4,9 @@ import { Link } from "react-router-dom"
 export default function Nav() {
   return (
     <div className="nav-main">
-      <img className="logo" src="../img/box-logo.png" alt="logo" />
+      <Link to="/">
+        <img className="logo" src="../img/box-logo.png" alt="logo" />
+      </Link>
       <ul className="nav-list">
         <Link to="/" className="nav-list-item">
           Home
