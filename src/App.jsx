@@ -1,40 +1,17 @@
 import React from "react"
-import { BrowserRouter, Router, Route } from "react-router-dom"
-import Item from "./components/Item"
-import Nav from "./components/Nav"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Home from "./pages/Home"
+import About from "./pages/About"
+import Top from "./pages/Top"
 
 export default function App() {
-  const [filmData, setFilmData] = React.useState([])
-
-  const getMovies = () => {
-    const url = "https://imdb-top-100-movies.p.rapidapi.com"
-    const options = {
-      method: "GET",
-      headers: {
-        "X-RapidAPI-Key": "0b36454fe8msh4030639156d05f6p18a9cfjsnab4ad95062cf",
-        "X-RapidAPI-Host": "imdb-top-100-movies.p.rapidapi.com",
-      },
-    }
-
-    try {
-      fetch(url, options)
-        .then((res) => res.json())
-        .then((data) => setFilmData(data))
-    } catch (error) {
-      console.error(error)
-    }
-  }
-
-  React.useEffect(() => {
-    getMovies()
-  }, [])
-
   return (
     <BrowserRouter>
-      <Router>
-        <Route to="/" path={<Nav />} />
-        <Route to="/item" path={<Item data={filmData} />} />
-      </Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/top" element={<Top />} />
+      </Routes>
     </BrowserRouter>
   )
 }

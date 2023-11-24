@@ -24,12 +24,19 @@ body {
 
 .nav-list {
   display: flex;
-  list-style: none;
   gap: 5em;
 }
 
 .nav-list-item {
+  list-style: none;
+  text-decoration: none;
   cursor: pointer;
+  color: white;
+}
+
+.nav-list-item:hover {
+  transform: scale(1.1);
+  font-weight: bold;
 }
 
 .main-container {
