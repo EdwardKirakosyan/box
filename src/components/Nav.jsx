@@ -1,22 +1,39 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 
 export default function Nav() {
+  const activeStyles = {
+    transform: "scale(1.1)",
+    fontWeight: "bold",
+  }
+
   return (
     <div className="nav-main">
       <Link to="/">
         <img className="logo" src="../img/box-logo.png" alt="logo" />
       </Link>
       <ul className="nav-list">
-        <Link to="/" className="nav-list-item">
+        <NavLink
+          to="/"
+          className="nav-list-item"
+          style={({ isActive }) => (isActive ? activeStyles : null)}
+        >
           Home
-        </Link>
-        <Link to="/about" className="nav-list-item">
+        </NavLink>
+        <NavLink
+          to="/about"
+          className="nav-list-item"
+          style={({ isActive }) => (isActive ? activeStyles : null)}
+        >
           About
-        </Link>
-        <Link to="/top" className="nav-list-item">
+        </NavLink>
+        <NavLink
+          to="/top"
+          className="nav-list-item"
+          style={({ isActive }) => (isActive ? activeStyles : null)}
+        >
           TOP 10
-        </Link>
+        </NavLink>
       </ul>
     </div>
   )
