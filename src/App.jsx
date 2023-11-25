@@ -1,9 +1,10 @@
 import React from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Layout from "./components/Layout"
 import Home from "./pages/Home"
 import About from "./pages/About"
 import Top from "./pages/Top"
+import PageNotFound from "./pages/PageNotFound"
+import Layout from "./components/Layout"
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
           <Route path="about" element={<About />} />
           <Route path="top" element={<Top />} />
         </Route>
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
   )
