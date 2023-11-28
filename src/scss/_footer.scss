@@ -1,0 +1,10 @@
+@import "root";
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  background-color: $color-light;
+  color: $color-dark;
+}

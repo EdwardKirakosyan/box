@@ -1,5 +1,6 @@
 @import "root";
 @import "reset";
+@import "footer";
 
 html,
 body {
@@ -31,7 +32,7 @@ body {
   list-style: none;
   text-decoration: none;
   cursor: pointer;
-  color: white;
+  color: $color-light;
 }
 
 .nav-list-item:hover {
